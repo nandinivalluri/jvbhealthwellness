@@ -3,7 +3,16 @@ import { StyleSheet, Text, View } from 'react-native';
 import { CheckBox, Button } from 'react-native-elements';
 
 export default class Input1 extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+      checked: false,
+    };
+  }
   render() {
+    const { checked } = this.state;
+
     return (
       <View style={styles.container}>
         <Text style={styles.text}>
@@ -15,24 +24,33 @@ export default class Input1 extends React.Component {
             title='Yes'
             checkedIcon='dot-circle-o'
             uncheckedIcon='circle-o'
+            checked={this.state.checked}
+            onPress={() => this.setState({checked: !checked})}
             
          /> 
           <CheckBox
             center
             title='No'
             checkedIcon='dot-circle-o'
-            uncheckedIcon='circle-o'         
+            uncheckedIcon='circle-o' 
+            checked={this.state.checked}
+            onPress={() => this.setState({checked: !checked})}
+                    
           /> 
           <CheckBox
             
             title='Not Yet'
             checkedIcon='dot-circle-o'
             uncheckedIcon='circle-o'
+            checked={this.state.checked}
+            onPress={() => this.setState({checked: !checked})}
+          
           /> 
 
         </View>
         <View style={styles.footer}>
           <Button
+            center
             title='SKIP'
           />  
 
