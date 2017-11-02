@@ -6,11 +6,12 @@ import Input3 from './App/WorkoutInputs/Input3';
 import Input4 from './App/WorkoutInputs/Input4';
 import Input5 from './App/WorkoutInputs/Input5';
 
+
 export default class App extends React.Component {
   render() {
     return (
       <View>
-        <Input5 />
+        <Input1 />
       </View>
     );
   }

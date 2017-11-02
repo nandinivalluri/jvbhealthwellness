@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput} from 'react-native';
+import { StyleSheet, Text, View} from 'react-native';
+import TextInput from '../Components/TextInput';
 
 
 export default class Input2 extends React.Component {
@@ -14,14 +15,7 @@ export default class Input2 extends React.Component {
         <Text style={styles.text}>
         <Text>Was Your Workout Easy or Hard?</Text>
         </Text>
-        <View>
-          <TextInput
-            style={{height: 40, borderColor: 'gray', borderWidth: 1, width: 320, marginTop: 20}}
-            onChangeText={(text) => this.setState({text})}
-            value={this.state.text}
-          />  
-        </View>
-
+        <TextInput />
       </View>
     );
   }

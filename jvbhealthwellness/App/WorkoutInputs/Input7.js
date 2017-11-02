@@ -1,19 +1,22 @@
 import React from 'react';
 import { StyleSheet, Text, View} from 'react-native';
-import CheckBox from '../Components/CheckBox';
+import TextInput from '../Components/TextInput';
 
 
-
-export default class Input5 extends React.Component { 
+export default class Input2 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { text: 'Select'}
+  }
+ 
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.text}>
-        <Text>Did You Have Any Pain or Twinges During or After Your Workout?</Text>
+        <Text>Tablespoons of Chia Seeds Consumed During Workout?</Text>
         </Text>
-        <CheckBox />
+        <TextInput />
       </View>
-      
     );
   }
 }
@@ -26,8 +29,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    fontSize: 25,
-    marginTop: 220,
+    fontSize: 30,
+    marginTop: 250,
     marginLeft:15
   }
   
