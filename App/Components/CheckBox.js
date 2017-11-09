@@ -33,15 +33,6 @@ export default class Input1 extends React.Component {
             onPress={() => this.setState({checked: !checked})}
                     
           /> 
-          <CheckBox
-            
-            title='Not Yet'
-            checkedIcon='dot-circle-o'
-            uncheckedIcon='circle-o'
-            checked={this.state.checked}
-            onPress={() => this.setState({checked: !checked})}
-          
-          /> 
         </View>
       
     );
